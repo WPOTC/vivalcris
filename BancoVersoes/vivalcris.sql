@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11/11/2026 às 17:34
+-- Tempo de geração: 11/11/2026 às 18:25
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -32,7 +32,7 @@ CREATE TABLE `alimento` (
   `nome` varchar(255) NOT NULL,
   `porcao` varchar(255) NOT NULL,
   `porcao_por_aluno` int(11) NOT NULL,
-  `id_cardapio` int(11) DEFAULT NULL
+  `id_cardapio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -43,7 +43,7 @@ CREATE TABLE `alimento` (
 
 CREATE TABLE `aluno` (
   `id` int(11) NOT NULL,
-  `nome` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
   `id_turma` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
